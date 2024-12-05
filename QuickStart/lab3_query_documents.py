@@ -34,7 +34,6 @@ from azure.search.documents.indexes.models import(
 )
 from dotenv import load_dotenv
 from typing import List
-from rich import print as pprint
 
 load_dotenv()
 
@@ -132,8 +131,8 @@ def _run_a_suggest_query():
 
 
 if __name__ == "__main__":
-    _run_first_query()
+    # _run_first_query()
     # _run_a_term_query()
     # _run_a_filter_query()
     # _run_look_up_document()
-    # _run_a_suggest_query()
+    _run_a_suggest_query()
