@@ -23,7 +23,7 @@ from azure.search.documents.indexes.models import(
     FieldMapping,
     ScoringProfile,
     ComplexField,
-    ImageAnalysisSkill,
+    ImageAnalysisSkill, 
     OcrSkill,
     VisualFeature,
     TextWeights,
@@ -47,17 +47,13 @@ def search_index_by_queryType_simple():
         with SearchClient(service_endpoint, index_name, AzureKeyCredential(key)) as search_client:
             results = search_client.search(
                 query_type=QueryType.SIMPLE,
-                search_text="gateway",
-                # search_text="wifi -parking"
-                # search_text="wifi +parking"
-                # search_text="'free wifi'"
+                search_text="azure",
                 include_total_count=True
             )
 
             for result in results:
                 for result_key, value in result.items():
                     print(f"{result_key}:{value}")
-
                 print("\n\n")
 
     except Exception as ex:
@@ -69,13 +65,18 @@ def search_index_by_queryType_full():
         with SearchClient(service_endpoint, index_name, AzureKeyCredential(key)) as search_client:
             results = search_client.search(
                 query_type=QueryType.FULL,
-                search_text="gateway",
-                # search_text="gateway AND networking",
-                # search_text="gateway OR networking",
-                # search_text="gateway AND NOT networking",
-                # search_text="title:gateway",
-                # search_text="rating:[4 TO 5]",
-                # search_text="gateway AND (networking OR security)"
+                # Field search
+                search_text="azure AND category:networking",
+                # search_text="azure AND NOT category:networking",
+                # search_text="category:networking OR category:analytics",
+                # 多個字要用雙引號包起來\"xxx\"" 
+                # search_text="category:AI AND title:\"azure bot service\""
+                # Fuzzy Search
+                # search_text="category:analyti~"
+                # Proximity search
+                # search_text="content:\"azure services\"~3"
+                # term boosting
+                # search_text="\"azure mobile\"^2 platform"
                 include_total_count=True,
                 top=2
             )
@@ -84,11 +85,10 @@ def search_index_by_queryType_full():
                 for result_key, value in result.items():
                     print(f"{result_key}:{value}")
                 print("\n\n")
-
     except Exception as ex:
         print(ex)
 
-def _update_index():
+def update_index():
 
     try:
         semantic_config = SemanticConfiguration(
@@ -108,7 +108,7 @@ def _update_index():
             result = search_index_client.create_or_update_index(index)
             print(f"Index {index_name} updated")
     except Exception as ex:
-        logging.error(ex)
+        print(ex)
 
 def search_index_by_queryType_semantic():
 
@@ -116,12 +116,12 @@ def search_index_by_queryType_semantic():
         with SearchClient(service_endpoint, index_name, AzureKeyCredential(key)) as search_client:
             results = search_client.search(
                 query_type=QueryType.SEMANTIC,
-                search_text="gateway",
+                search_text="If I want to build an Android app, What services does Azure provide?",
                 include_total_count=True,
-                # required
                 semantic_configuration_name="my-semantic-config",
                 query_caption="extractive",
-                query_answer="extractive"
+                query_answer="extractive",
+                top=3
             )
 
             print(f"Total count: {results.get_count()}")
@@ -136,27 +136,24 @@ def search_index_by_queryType_semantic():
                 if captions:
                     caption = captions[0]
                     if caption.highlights:
-                        print(f"Caption highlights:{caption.highlights}\n")
+                        print(f"Caption: {caption.highlights}\n")
                     else:
-                        print(f"Caption text:{caption.text}\n")
+                        print(f"Caption text: {caption.text}\n")
                 print("\n\n")
-            
+
             semantic_answers = results.get_answers()
             print("<answers start>\n")
             for answer in semantic_answers:
                 if answer.highlights:
-                    print(f"Semantic Answer highlights:{answer.highlights}")
+                    print(f"Semantic Answer highlights: {answer.highlights}")
                 else:
-                    print(f"Semantic Answer text:{answer.text}")
+                    print(f"Semantic Answer text: {answer.text}")
             print("<answers end>\n")
     except Exception as ex:
         print(ex)
 
-
-
 if __name__ == "__main__":
-    # search_index_by_queryType_simple()
+    search_index_by_queryType_simple()
     # search_index_by_queryType_full()
-    _update_index()
-    search_index_by_queryType_semantic()
-
+    # update_index()
+    # search_index_by_queryType_semantic()

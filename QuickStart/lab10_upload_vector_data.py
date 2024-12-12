@@ -49,8 +49,8 @@ load_dotenv()
 
 service_endpoint = os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
 key = os.getenv("AZURE_SEARCH_API_KEY")
-index_name = "hotels-quickstart-vector"
-indexer_name = "hotels-quickstart-vector-indexer"
+index_name = "azure-services-vector"
+indexer_name = "azure-services-vector-indexer"
 connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 
 azure_openai_model = "gpt-4o"
@@ -154,7 +154,7 @@ def _create_index():
 def export_embeddings_to_json():
 
     try:
-        path = os.path.join("..","JsonFile","text-sample.json")
+        path = os.path.join("..","JsonFile","azure-service.json")
         with open(path,"r",encoding="utf-8") as file:
             input_data = json.load(file)
 
@@ -171,7 +171,7 @@ def export_embeddings_to_json():
             item['titleVector'] = title_embeddings[i]
             item['contentVector'] = content_embeddings[i]
 
-        output_path = os.path.join("..","JsonFile","text-sample-embeddings.json")
+        output_path = os.path.join("..","JsonFile","azure-service-embeddings.json")
         output_directory = os.path.dirname(output_path)
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)
@@ -183,7 +183,7 @@ def export_embeddings_to_json():
 def _upload_documents():
 
     try:
-        output_path = os.path.join("..","JsonFile","text-sample-embeddings.json")
+        output_path = os.path.join("..","JsonFile","azure-service-embeddings.json")
         output_directory = os.path.dirname(output_path)
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)
@@ -195,9 +195,8 @@ def _upload_documents():
         print(ex)
 
 if __name__ == "__main__":
-    # export_embeddings_to_json()
+    export_embeddings_to_json()
     # _create_index()
     # _upload_documents()
-    _delete_index()
-    _create_index()
-    _upload_documents()
+    # 需刪除indexer、datasource、index
+    # _delete_index()

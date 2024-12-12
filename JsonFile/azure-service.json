@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "title": "Azure App Service",
+        "content": "Azure App Service is a fully managed platform for building, deploying, and scaling web apps. You can host web apps, mobile app backends, and RESTful APIs. It supports a variety of programming languages and frameworks, such as .NET, Java, Node.js, Python, and PHP. The service offers built-in auto-scaling and load balancing capabilities. It also provides integration with other Azure services, such as Azure DevOps, GitHub, and Bitbucket.",
+        "category": "Web"
+    },
+    {
+        "id": "2",
+        "title": "Azure Functions",
+        "content": "Azure Functions is a serverless compute service that enables you to run code on-demand without having to manage infrastructure. It allows you to build and deploy event-driven applications that automatically scale with your workload. Functions support various languages, including C#, F#, Node.js, Python, and Java. It offers a variety of triggers and bindings to integrate with other Azure services and external services. You only pay for the compute time you consume.",
+        "category": "Compute"
+    },
+    {
+        "id": "3",
+        "title": "Azure Cognitive Services",
+        "content": "Azure Cognitive Services are a set of AI services that enable you to build intelligent applications with powerful algorithms using just a few lines of code. These services cover a wide range of capabilities, including vision, speech, language, knowledge, and search. They are designed to be easy to use and integrate into your applications. Cognitive Services are fully managed, scalable, and continuously improved by Microsoft. It allows developers to create AI-powered solutions without deep expertise in machine learning.",
+        "category": "AI + Machine Learning"
+    },
+    {
+        "id": "4",
+        "title": "Azure Storage",
+        "content": "Azure Storage is a scalable, durable, and highly available cloud storage service that supports a variety of data types, including blobs, files, queues, and tables. It provides a massively scalable object store for unstructured data. Storage supports data redundancy and geo-replication, ensuring high durability and availability. It offers a variety of data access and management options, including REST APIs, SDKs, and Azure Portal. You can secure your data using encryption at rest and in transit.",
+        "category": "Storage"
+    },
+    {
+        "id": "5",
+        "title": "Azure SQL Database",
+        "content": "Azure SQL Database is a fully managed relational database service based on the latest stable version of Microsoft SQL Server. It offers built-in intelligence that learns your application patterns and adapts to maximize performance, reliability, and data protection. SQL Database supports elastic scaling, allowing you to dynamically adjust resources to match your workload. It provides advanced security features, such as encryption, auditing, and threat detection. You can migrate your existing SQL Server databases to Azure SQL Database with minimal downtime.",
+        "category": "Databases"
+    },
+    {
+        "id": "6",
+        "title": "Azure Cosmos DB",
+        "content": "Azure Cosmos DB is a fully managed, globally distributed, multi-model database service designed for building highly responsive and scalable applications. It offers turnkey global distribution, automatic and instant scalability, and guarantees low latency, high availability, and consistency. Cosmos DB supports popular NoSQL APIs, including MongoDB, Cassandra, Gremlin, and Azure Table Storage. You can build globally distributed applications with ease, without having to deal with complex configuration and capacity planning. Data stored in Cosmos DB is automatically indexed, enabling you to query your data with SQL, JavaScript, or other supported query languages.",
+        "category": "Databases"
+    },
+    {
+        "id": "7",
+        "title": "Azure Kubernetes Service (AKS)",
+        "content": "Azure Kubernetes Service (AKS) is a managed container orchestration service based on the popular open-source Kubernetes system. It simplifies Kubernetes deployment and management, making it easy for developers and administrators to deploy, scale, and manage containerized applications. AKS offers automatic upgrades, scaling, and self-healing capabilities, reducing the operational overhead of managing Kubernetes clusters. It also integrates with Azure services like Azure Active Directory, Azure Monitor, and Azure Policy, providing a seamless experience for managing your applications and infrastructure.",
+        "category": "Containers"
+    },
+    {
+        "id": "8",
+        "title": "Azure Virtual Machines",
+        "content": "Azure Virtual Machines (VMs) is an Infrastructure-as-a-Service (IaaS) offering that allows you to deploy and manage virtual machines in the cloud. You can choose from a wide range of VM sizes, operating systems, and software configurations. VMs support various operating systems, including Windows Server, Linux, and SQL Server. You can scale your VMs up or down as needed, and pay only for the resources you use. VMs provide built-in security features, such as Azure Security Center, Azure Active Directory, and encryption.",
+        "category": "Compute"
+    },
+    {
+        "id": "9",
+        "title": "Azure DevOps",
+        "content": "Azure DevOps is a suite of services that help you plan, build, and deploy applications. It includes Azure Boards for work item tracking, Azure Repos for source code management, Azure Pipelines for continuous integration and continuous deployment, Azure Test Plans for manual and automated testing, and Azure Artifacts for package management. DevOps supports a wide range of programming languages, frameworks, and platforms, making it easy to integrate with your existing development tools and processes. It also integrates with other Azure services, such as Azure App Service and Azure Functions.",
+        "category": "Developer Tools"
+    },
+    {
+        "id": "10",
+        "title": "Azure IoT Hub",
+        "content": "Azure IoT Hub is a managed service that enables you to connect, monitor, and manage billions of IoT devices. It provides secure and reliable communication between your IoT devices and your backend solution. IoT Hub supports multiple communication protocols, including MQTT, AMQP, and HTTPS. It offers device-to-cloud and cloud-to-device messaging, device management, and device twin capabilities. With IoT Hub, you can build scalable and secure IoT solutions that integrate with other Azure services and custom applications.",
+        "category": "Internet of Things"
+    },
+    {
+        "id": "11",
+        "title": "Azure Machine Learning",
+        "content": "Azure Machine Learning is a cloud-based service for building, training, and deploying machine learning models. It offers a visual interface for creating and managing experiments, as well as support for popular programming languages like Python and R. Machine Learning supports various algorithms, frameworks, and data sources, making it easy to integrate with your existing data and workflows. You can deploy your models as web services, and scale them based on your needs. It also integrates with other Azure services, such as Azure Databricks and Azure Data Factory.",
+        "category": "AI + Machine Learning"
+    },
+    {
+        "id": "12",
+        "title": "Azure Databricks",
+        "content": "Azure Databricks is an Apache Spark-based analytics platform optimized for the Azure cloud. It provides a collaborative workspace for data scientists, engineers, and business users to process, analyze, and visualize big data. Databricks supports multiple programming languages, including Python, Scala, R, and SQL. It offers built-in integration with Azure Blob Storage, Azure Data Lake Storage, and Azure Cosmos DB. You can also use Databricks to train and deploy machine learning models, and integrate with Azure Machine Learning.",
+        "category": "Analytics"
+    },
+    {
+        "id": "13",
+        "title": "Azure Active Directory",
+        "content": "Azure Active Directory (Azure AD) is a cloud-based identity and access management service that helps you manage and secure access to your applications and resources. It provides features like single sign-on (SSO), multi-factor authentication (MFA), and conditional access policies. Azure AD supports integration with on-premises Active Directory, as well as third-party identity providers like Google and Facebook. You can use Azure AD to protect both cloud-based and on-premises applications, and manage access for employees, partners, and customers.",
+        "category": "Identity"
+    },
+    {
+        "id": "14",
+        "title": "Azure Logic Apps",
+        "content": "Azure Logic Apps is a cloud-based service that allows you to create and run workflows that integrate with various services and data sources. It provides a visual designer for creating workflows, and supports a wide range of connectors for popular services like Office 365, Salesforce, and Dropbox. Logic Apps enable you to automate tasks, process and transform data, and orchestrate complex processes without writing code. You can monitor and manage your workflows using Azure Portal, REST APIs, or PowerShell.",
+        "category": "Integration"
+    },
+    {
+        "id": "15",
+        "title": "Azure Event Hubs",
+        "content": "Azure Event Hubs is a fully managed, real-time data ingestion service that enables you to stream and process millions of events per second. It supports various data producers, such as IoT devices, applications, and services. Event Hubs provides low latency, high throughput, and scalable data streaming, making it suitable for big data scenarios like telemetry processing and log analytics. You can use Event Hubs with other Azure services, such as Azure Stream Analytics and Azure Functions, to build end-to-end real-time data processing solutions.",
+        "category": "Big Data"
+    },
+    {
+        "id": "16",
+        "title": "Azure API Management",
+        "content": "Azure API Management is a fully managed service that helps you create, publish, and manage APIs for your applications. It provides features like API documentation, developer portal, access control, and caching. API Management supports various API formats, including REST, SOAP, and GraphQL. You can use API Management to secure your APIs with authentication, authorization, and IP filtering. It also offers built-in analytics and monitoring, allowing you to track the usage and performance of your APIs.",
+        "category": "Integration"
+    },
+    {
+        "id": "17",
+        "title": "Azure Data Factory",
+        "content": "Azure Data Factory is a cloud-based data integration service that allows you to create, schedule, and manage data workflows. It supports a wide range of sources and destinations, such as Azure Blob Storage, Azure SQL Database, and on-premises file systems. Data Factory provides a visual interface for designing and monitoring your workflows, as well as support for popular programming languages like Python and .NET. You can use Data Factory to move and transform data, orchestrate complex data processing tasks, and integrate with other Azure services.",
+        "category": "Analytics"
+    },
+    {
+        "id": "18",
+        "title": "Azure Synapse Analytics",
+        "content": "Azure Synapse Analytics is an integrated analytics service that brings together big data and data warehousing. It enables you to ingest, prepare, manage, and serve data for immediate business intelligence and machine learning needs. Synapse Analytics provides a unified workspace for data engineers, data scientists, and business analysts to collaborate and build solutions. It supports various data sources, including Azure Data Lake Storage, Azure Blob Storage, and Azure Cosmos DB. You can use Synapse Analytics with other Azure services, such as Azure Machine Learning and Power BI.",
+        "category": "Analytics"
+    },
+    {
+        "id": "19",
+        "title": "Azure Batch",
+        "content": "Azure Batch is a cloud-based job scheduling service that enables you to run large-scale parallel and high-performance computing (HPC) applications. It provides features like automatic scaling, task scheduling, and resource management. Batch supports various VM sizes, operating systems, and application frameworks, making it easy to integrate with your existing workloads. You can use Batch to process large datasets, run simulations, and perform complex calculations. It also integrates with other Azure services, such as Azure Storage and Azure Active Directory.",
+        "category": "Compute"
+    },
+    {
+        "id": "20",
+        "title": "Azure CDN",
+        "content": "Azure Content Delivery Network (CDN) is a global content delivery network that enables you to deliver content to users with low latency and high availability. It caches and serves content from edge servers located near your users, improving the performance and reliability of your web applications. Azure CDN supports various content types, including static files, videos, and images. It provides advanced features like geo-filtering, custom domains, and SSL certificates. You can use Azure CDN with other Azure services, such as Azure App Service and Azure Storage.",
+        "category": "Networking"
+    }
+]
