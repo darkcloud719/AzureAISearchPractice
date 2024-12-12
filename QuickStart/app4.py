@@ -1,3 +1,4 @@
+# azure-search-documents==11.5.2
 import os,json,logging,sys
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient

@@ -186,6 +186,6 @@ def _create_indexer():
 
 if __name__ == "__main__":
     # _delete_index()
-    # _create_index()
-    # _create_data_source()
+    _create_index()
+    _create_data_source()
     _create_indexer()

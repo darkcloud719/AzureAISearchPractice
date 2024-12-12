@@ -49,7 +49,7 @@ load_dotenv()
 
 service_endpoint = os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
 key = os.getenv("AZURE_SEARCH_API_KEY")
-index_name = "hotels-quickstart-vector"
+index_name = "azure-services-vector"
 indexer_name = "hotels-quickstart-vector-indexer"
 connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 
